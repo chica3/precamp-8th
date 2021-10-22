@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>게임</title>
+    <link href="styles/game.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script>
+        function startWord(){
+            const word = document.getElementById("word").innerText // 코드캠프
+            const lastWord = word[word.length - 1] // 프
+
+            const myword = document.getElementById("myword").value //프랑스
+            const firstWord = myword[0] //프
+
+            if(lastWord === firstWord) {
+                // 맞았을 때, 정답코드 작성하기
+                document.getElementById("result").innerHTML = "<span style='color: pink'>정답❤️</span>";
+                document.getElementById("word").innerText = myword;
+                document.getElementById("myword").value = "";
+            } else {
+                // 틀렸을 때 정답코드 작성하기
+                document.getElementById("result").innerHTML = "<span style='color: blue'>오답💣</span>";
+                document.getElementById("word").innerHTML = "<span style='color:black; font-weight:700'>" + word + "</span>";
+                document.getElementById("myword").value = "";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper__header">
+            <span class="title">GAME</span> <span class="subtitle">TODAY CHOICE</span>
+        </div>
+
+        <div class="wrapper__word">
+            <img src="images/word.png">
+            <div class="word__title">
+                끝말잇기
+            </div>
+            <div class="word_startWord">
+                제시어: <span id="word">코드캠프</span>
+            </div>
+            <div class="word__text">
+                <input id="myword" class="textbox" type="text" placeholder="단어를 입력하세요." />
+                <button class="search" onclick="startWord()">검색</button>
+            </div>
+            <div id="result" class="word__result">
+                결과!
+            </div>
+        </div>
+
+        <div class="wrapper__lotto">
+            <img class="lotto__img" src="images/lotto.png">
+            <div class="lotto__title">LOTTO</div>
+            <div class="lotto__buttonTitle">버튼을 누르세요.</div>
+            <div class="wrapper__lotto__number">
+                <span>3</span>
+                <span>5</span>
+                <span>10</span>
+                <span>24</span>
+                <span>30</span>
+                <span>34</span>
+            </div>
+            <button class="wrapper__lotto__btn">Button</button>
+        </div>
+    </div>
+</body>
+
+</html>

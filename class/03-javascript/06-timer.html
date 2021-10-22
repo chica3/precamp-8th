@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <script>
+        let isStarted = false
+        const change=()=> {
+            if(isStarted === false) {
+                isStarted = true
+            
+                const token = String(Math.floor(Math.random()*1000000)).padStart(6, "0")
+                document.getElementById("token").innerHTML = "<span style='color:#"+ token + "'>" + token + "</span>"
+                let time = 179
+                setInterval(function(){
+                    if(time >= 0) {
+                        const minutes = String(Math.floor(time / 60)).padStart(2,"0");
+                        const seconds = String(time % 60).padStart(2, "0")
+                        document.getElementById("time").innerText = minutes + ":" + seconds
+                        time = time - 1
+                    }
+                }, 1000)
+            } else {
+                alert("이미 실행되었습니다!")
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>타이머 만들기</h1>
+    <h1 id="token" style="display: inline-block;">000000</h1>
+    <button onclick="change()">인증번호 전송</button>
+    <br>
+    <div id="time" style="display: inline-block;">03:00</div>
+    <button disabled>인증완료</button>
+</body>
+</html>

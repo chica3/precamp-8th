@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+*:focus {
+    background-color: lightyellow
+}
+.title {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.wrapper {
+    width: 400px;
+    height: 670px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.wrapper__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+}
+.wrapper__user__item {
+    width: 350px;
+    height: 40px;
+    padding-left: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.wrapper__phone {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+    text-align: center;
+    line-height: 40px;
+}
+.wrapper__phone input:first-child {
+    width: 70px;
+}
+.phone {
+    width: 90px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}
+.wrapper__token__top {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.wrapper__token__top div {
+    width: 90px;
+}
+.wrapper__token__top button {
+    width: 250px;
+}
+.wrapper__token__bottom {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 15px;
+}
+.wrapper__token__bottom div {
+    width: 90px;
+}
+.wrapper__token__bottom button {
+    width: 250px;
+}
+.wrapper__bottom {
+    width: 400px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+select {
+    width: 350px;
+    height: 40px;
+}
+hr {
+    width: 350px;
+}
+.signup {
+    width: 350px;
+    height: 40px;
+}
